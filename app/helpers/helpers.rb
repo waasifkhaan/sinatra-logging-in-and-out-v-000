@@ -4,8 +4,8 @@ class Helpers
     @user =User.find_by_id(session[:user_id])
   end 
   
-  def is_logged_in?(session_hash)
-    if @user.id == session_hash
+  def self.is_logged_in?(session)
+    if @user.id == session[:user_id]
       true 
     else 
       false 
