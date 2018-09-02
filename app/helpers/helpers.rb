@@ -6,7 +6,13 @@ class Helpers
     
   end 
   
-  def is_logged_in?
+  def is_logged_in?(session_hash)
+    if @user.id == session_hash
+      true 
+    else 
+      false 
+    end 
+      
   end 
   
 end
