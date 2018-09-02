@@ -11,7 +11,7 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/login' do
-    @user = User.find_by
+    @user = User.find_by(email: params[:email])
 
   end
 
